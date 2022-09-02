@@ -1,0 +1,7 @@
+{
+  "name": "userprofile-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
