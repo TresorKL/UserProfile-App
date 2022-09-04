@@ -8,7 +8,7 @@
     <ion-content :fullscreen="true">
       <ion-list>
         <ion-item v-for="user of users" :key="user.id">
-          <ion-card>
+          <ion-card router-link="/detail" :key="user.id">
             <ion-img
               id="profile-img"
               :src="user.imageProfile"
@@ -35,6 +35,11 @@ import {
   IonToolbar,
   IonContent,
   IonImg,
+  IonCard,
+  IonCardTitle,
+  IonCardHeader,
+  IonList,
+  IonItem,
 } from "@ionic/vue";
 
 export default {
@@ -45,6 +50,11 @@ export default {
     IonToolbar,
     IonContent,
     IonImg,
+    IonCard,
+    IonCardTitle,
+    IonCardHeader,
+    IonList,
+    IonItem,
   },
   data() {
     return {
@@ -53,7 +63,7 @@ export default {
           id: 1,
           userName: "Tresor",
           profession: "Software developer",
-          imageProfile: "https://picsum.photos/280",
+          imageProfile: "https://source.unsplash.com/random/280x210",
           desciption:
             "Lists are made up of multiple rows of items which can contain text, buttons, toggles, icons, thumbnails, and much more. Lists generally contain items with similar data content, such as images and text.",
         },
@@ -61,7 +71,7 @@ export default {
           id: 2,
           userName: "Enock",
           profession: "webv developer",
-          imageProfile: "https://picsum.photos/280",
+          imageProfile: "https://source.unsplash.com/random/280x210",
           desciption:
             "Lists are made up of multiple  and much more. such as images and text.",
         },
@@ -69,7 +79,7 @@ export default {
           id: 3,
           userName: "David",
           profession: "Data scientist",
-          imageProfile: "https://picsum.photos/280",
+          imageProfile: "https://source.unsplash.com/random/280x210",
           desciption:
             "Lists are made up of multiple rows of items which can contain text, buttons, toggles, icons, thumbnails, and much more. Lists generally contain items with similar data content, such as images and text.",
         },
@@ -77,7 +87,7 @@ export default {
           id: 4,
           userName: "Nana",
           profession: "UI/UX designer",
-          imageProfile: "https://picsum.photos/280",
+          imageProfile: "https://source.unsplash.com/random/280x210",
           desciption:
             "A web-based platform to increase productivity, decrease cycle times, accelerate time to market, and protect institutional knowledge.",
         },
@@ -85,7 +95,7 @@ export default {
           id: 5,
           userName: "Norbert",
           profession: "SQL Dev",
-          imageProfile: "https://picsum.photos/280",
+          imageProfile: "https://source.unsplash.com/random/280x200/?img=1",
           desciption:
             "A web-based platform to increase productivity, decrease cycle times, accelerate time to market, and protect institutional knowledge.",
         },
@@ -105,6 +115,6 @@ ion-img > #profile-img {
   color: gray;
 }
 ion-list {
-  margin: auto;
+  margin-left: 20px;
 }
 </style>
