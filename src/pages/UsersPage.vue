@@ -8,7 +8,7 @@
     <ion-content :fullscreen="true">
       <ion-list>
         <ion-item v-for="user of users" :key="user.id">
-          <ion-card router-link="/detail" :key="user.id">
+          <ion-card router-link="/detail/{{user.id}}" :key="user.id">
             <ion-img
               id="profile-img"
               :src="user.imageProfile"
