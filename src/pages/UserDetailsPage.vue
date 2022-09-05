@@ -2,7 +2,7 @@
   <ion-page id="body">
     <ion-header
       ><ion-toolbar
-        ><ion-back-button slot="start"></ion-back-button
+        ><ion-back-button default-href="/users" slot="start"></ion-back-button
         ><ion-title>User Name</ion-title></ion-toolbar
       ></ion-header
     >
