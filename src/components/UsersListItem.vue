@@ -1,9 +1,5 @@
 <template>
-  <ion-item
-    v-for="user of users"
-    :router-link="`/detail/${user.id}`"
-    :key="user.id"
-  >
+  <ion-item :router-link="`/detail/${user.id}`">
     <ion-card>
       <ion-img
         id="profile-img"
@@ -20,4 +16,24 @@
     </ion-card>
   </ion-item>
 </template>
-<script></script>
+<script>
+import {
+  IonItem,
+  IonCard,
+  IonImg,
+  IonCardHeader,
+  IonCardTitle,
+} from "@ionic/vue";
+
+export default {
+  props: ["user"],
+
+  components: {
+    IonItem,
+    IonCard,
+    IonImg,
+    IonCardHeader,
+    IonCardTitle,
+  },
+};
+</script>

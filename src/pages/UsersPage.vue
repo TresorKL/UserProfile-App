@@ -6,7 +6,8 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-list>
+      <user-list :users="users"></user-list>
+      <!-- <ion-list>
         <ion-item
           v-for="user of users"
           :router-link="`/detail/${user.id}`"
@@ -27,7 +28,7 @@
             </ion-card-header>
           </ion-card>
         </ion-item>
-      </ion-list>
+      </ion-list> -->
     </ion-content>
   </ion-page>
 </template>
@@ -38,14 +39,8 @@ import {
   IonTitle,
   IonToolbar,
   IonContent,
-  IonImg,
-  IonCard,
-  IonCardTitle,
-  IonCardHeader,
-  IonList,
-  IonItem,
 } from "@ionic/vue";
-
+import UserList from "../components/UsersList.vue";
 export default {
   components: {
     IonPage,
@@ -53,12 +48,7 @@ export default {
     IonTitle,
     IonToolbar,
     IonContent,
-    IonImg,
-    IonCard,
-    IonCardTitle,
-    IonCardHeader,
-    IonList,
-    IonItem,
+    UserList,
   },
   computed: {
     users() {
