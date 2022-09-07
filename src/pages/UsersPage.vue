@@ -7,8 +7,12 @@
     </ion-header>
     <ion-content :fullscreen="true">
       <ion-list>
-        <ion-item v-for="user of users" :key="user.id">
-          <ion-card router-link="/detail/{{user.id}}" :key="user.id">
+        <ion-item
+          v-for="user of users"
+          :router-link="`/detail/${user.id}`"
+          :key="user.id"
+        >
+          <ion-card>
             <ion-img
               id="profile-img"
               :src="user.imageProfile"
