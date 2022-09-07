@@ -46,7 +46,6 @@ export default {
   },
   computed: {
     loadedUser() {
-      //.user(this.userId);this.$store.getters.user(this.userId);
       return this.$store.getters.user(this.userId);
     },
   },
