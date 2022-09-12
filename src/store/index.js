@@ -52,6 +52,24 @@ const store = createStore({
     };
   },
 
+  mutations: {
+    addUser(state, userData) {
+      const newUser = {
+        id: Date().toString(),
+        userName: userData.userName,
+        profession: userData.profession,
+        imageProfile: userData.imageProfile,
+        desciption: userData.desciption,
+      };
+      state.users.unshift(newUser);
+    },
+  },
+  actions: {
+    addUser(context, userData) {
+      context.commit("addUser", userData);
+    },
+  },
+
   getters: {
     users(state) {
       return state.users;
