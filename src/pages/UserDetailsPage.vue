@@ -13,8 +13,8 @@
         :src="loadedUser.imageProfile"
         :key="loadedUser.id"
       ></ion-img>
-      <h2>{{ loadedUser.profession }}</h2>
-      <p>{{ loadedUser.desciption }}</p>
+      <h2 class="ion-text-center">{{ loadedUser.profession }}</h2>
+      <p class="ion-text-center">{{ loadedUser.desciption }}</p>
     </ion-content>
   </ion-page>
 </template>

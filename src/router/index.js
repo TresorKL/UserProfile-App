@@ -17,6 +17,10 @@ const routes = [
     name: "Detail",
     component: () => import("../pages/UserDetailsPage"),
   },
+  {
+    path: "/users/add",
+    component: () => import("../pages/AddUserPage"),
+  },
 ];
 
 const router = createRouter({
